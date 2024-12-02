@@ -1,0 +1,196 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: url('1.webp') no-repeat center center fixed; /* Replace with your image */
+  background-size: cover;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(25, 25, 50, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1em;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.task-info {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px; /* Rounder edges for a softer look */
+  background: linear-gradient(45deg, #00c6ff, #0072ff); /* Bright blue gradient */
+  color: white; /* White text */
+  font-size: 1.2em;
+  cursor: pointer;
+  position: relative; /* For positioning effects */
+  overflow: hidden; /* Contain pseudo-elements */
+  transition: transform 0.2s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1); /* Soft light effect */
+  border-radius: 50%; /* Circular effect */
+  transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+  transition: transform 0.4s ease; /* Smooth scaling */
+  z-index: 0; /* Behind the text */
+}
+
+button:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Expand on hover */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff); /* Swap gradient colors on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 5px 25px rgba(0, 114, 255, 0.5); /* Enhanced shadow */
+}
+
+button span {
+  position: relative; /* Keep text above the overlay */
+  z-index: 1; /* Bring text above the pseudo-element */
+}
+
+.filters, .sorting {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+#taskCount, #taskProgress {
+  margin-top: 10px;
+  font-size: 1.4em;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+#toast {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* 🔕 */
+}
+
+.priority-low { color: green; } /* 🍏 */
+.priority-medium { color: orange; } /* 🍊 */
+.priority-high { color: red; } /* 🔴 */
+
+.theme-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dark-mode {
+  background-color: #222; /* 🌑 */
+  color: #fff;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+  background-color: #444; /* 🌘 */
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-mode button {
+  background: #03a9f4; /* 🌊 */
+}
+
+.dark-mode button:hover {
+  background: #0297e6; /* 🔵 */
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.theme-toggle label {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.theme-toggle input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.theme-toggle button {
+  padding: 15px 30px; /* Match padding */
+  border: none; /* No border */
+  border-radius: 10px; /* Match border radius */
+  background: #1e88e5; /* Match existing button background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1.2em; /* Match font size */
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Same transitions */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Add text shadow */
+}
+
+.theme-toggle button:hover {
+  background: #1565c0; /* Hover color match */
+  transform: scale(1.05); /* Scale effect */
+  box-shadow: 0 0 15px rgba(30, 136, 229, 1); /* Hover shadow effect */
+}
+
+

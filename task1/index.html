@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>To-Do List App</title>
+</head>
+<body>
+    <audio id="backgroundMusic" loop>
+        <source src="2.mp3" type="audio/mpeg"> <!-- Replace with your music file -->
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <h1>📝 To-Do List ✨</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task... 🆕">
+        <input type="date" id="dueDateInput" placeholder="🗓️ Due Date">
+        <select id="priorityInput">
+            <option value="normal">🔄 Normal</option>
+            <option value="high">🔥 High</option>
+            <option value="medium">⚠️ Medium</option>
+            <option value="low">🐢 Low</option>
+        </select>
+        <select id="categoryInput">
+            <option value="work">💼 Work</option>
+            <option value="personal">🏠 Personal</option>
+            <option value="school">🏫 School</option>
+        </select>
+        <input type="text" id="tagsInput" placeholder="Add tags (comma-separated) 🏷️">
+        <textarea id="noteInput" placeholder="Add notes (optional) 📝"></textarea>
+        <input type="text" id="recurrenceInput" placeholder="Recurrence (daily/weekly/monthly) 🔄">
+        <input type="text" id="collaboratorsInput" placeholder="Add collaborators (comma-separated) 👥">
+        <button id="addTaskBtn">➕ Add Task</button>
+        <button id="exportTasks">📥 Export Tasks</button>
+        <input type="file" id="importTasks" accept=".json">
+        <input type="text" id="searchInput" placeholder="🔍 Search tasks...">
+        <div class="filters">
+            <button id="showAll">🔄 Show All</button>
+            <button id="showCompleted">✅ Show Completed</button>
+            <button id="showIncomplete">❌ Show Incomplete</button>
+        </div>
+        <div class="sorting">
+            <button id="sortAlphabetically">🔤 Sort Alphabetically</button>
+            <button id="sortByDueDate">📅 Sort by Due Date</button>
+            <button id="sortByPriority">⚖️ Sort by Priority</button>
+        </div>
+        <div id="taskCount">📊 Total Tasks: 0</div>
+        <div id="taskProgress">📈 Progress: 0%</div>
+        <button id="clearCompleted">🗑️ Clear Completed Tasks</button>
+        
+        <!-- Music and Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="musicToggle">🎵 Music</button>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+            <button id="toggleBackgroundBtn">🌅 View Background</button>
+        </div>
+
+        <ul id="taskList"></ul>
+        <div id="toast" style="display: none;">🔔 Notification</div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Start background music
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        backgroundMusic.play();
+
+        // Music toggle functionality
+        const musicToggle = document.getElementById('musicToggle');
+        musicToggle.addEventListener('change', () => {
+            if (musicToggle.checked) {
+                backgroundMusic.play();
+            } else {
+                backgroundMusic.pause();
+            }
+        });
+
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+        });
+    </script>
+</body>
+</html>
