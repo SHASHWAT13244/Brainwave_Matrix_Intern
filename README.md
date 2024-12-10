@@ -3,7 +3,7 @@
 # Task Management App - Frontend Internship Project
 https://shashwat13244.github.io/-To-Do-List-App/
 
-This project is a fully functional Task Management application developed as part of my Web Development Internship. It demonstrates my proficiency in utilizing HTML, CSS, and JavaScript to build dynamic, interactive web applications.
+This project is a fully functional Task Management application developed as part of my Web Development Internship at Brainwave Matrix Solutions. It demonstrates my proficiency in utilizing HTML, CSS, and JavaScript to build dynamic, interactive web applications.
 
 ## Task Overview:
 As part of my internship, I was assigned to **create a To-Do list** using **HTML**, **CSS**, and **JavaScript**. The key features of this application include:
