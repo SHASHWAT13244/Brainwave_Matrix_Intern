@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: rgba(233, 236, 239, 0.8);
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    animation: textAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.hero p {
+    animation: textAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.collections {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.collection {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collection img {
+    max-width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image does not stretch */
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.collection img:hover {
+    transform: scale(1.1);
+}
+
+.collection:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product, .collection {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.dark-mode .product, body.dark-mode .collection {
+    background: #444;
+    border-color: #666;
+}
+
+body.dark-mode .product:hover, body.dark-mode .collection:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.product img,
+.collection img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.product img:hover,
+.collection img:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+body.dark-mode .btn {
+    background: #218838;
+}
+
+body.dark-mode .btn:hover {
+    background: #28a745;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f1f1f1;
+}
+
+body.dark-mode footer {
+    background: #222;
+    color: #fff;
+}
+
+.cart {
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-total {
+    margin-top: 20px;
+}
+
+body.dark-mode .cart {
+    background: #444;
+}
+
+body.dark-mode .cart-total {
+    color: #fff;
+}
+
+.glow {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    animation: backgroundAnimation 10s ease infinite;
+    z-index: -1;
+}
+
+body.dark-mode::before {
+    background: linear-gradient(270deg, rgba(0, 255, 150, 0.5), rgba(255, 0, 204, 0.5)); /* Darker gradient for dark mode */
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

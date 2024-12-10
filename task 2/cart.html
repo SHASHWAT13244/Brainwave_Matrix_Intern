@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cart - Sports E-commerce</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/1.png" alt="Sports Store Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="theme-toggle"><i class="fas fa-adjust"></i> Toggle Dark Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cart">
+        <h2 class="glow">Your Cart</h2>
+        <div id="cart-items">
+            <p>No items in the cart.</p>
+        </div>
+        <div class="cart-total">
+            <h3>Total: ₹<span id="total-price">0.00</span></h3>
+        </div>
+        <button id="checkout" class="btn"><i class="fas fa-credit-card"></i> Checkout</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sports E-commerce. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
