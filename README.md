@@ -52,6 +52,7 @@ This project demonstrates my ability to build and style interactive, user-friend
 
 # task-2  Sports E-commerce - Frontend Internship Project
 https://shashwat13244.github.io/Sports-E-commerce-/
+
 This project is a fully functional **Sports E-commerce website** developed as part of my Web Development Internship at **Brainwave Matrix Solutions**. It demonstrates my proficiency in utilizing **HTML**, **CSS**, and **JavaScript** to build dynamic, interactive web applications.
 
 ## Task  2 Overview:
