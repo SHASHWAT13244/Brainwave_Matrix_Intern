@@ -1,11 +1,11 @@
 # Brainwave_Matrix_Intern
 
-# Task Management App - Frontend Internship Project
+# task-1 Task Management App - Frontend Internship Project
 https://shashwat13244.github.io/-To-Do-List-App/
 
 This project is a fully functional Task Management application developed as part of my Web Development Internship at Brainwave Matrix Solutions. It demonstrates my proficiency in utilizing HTML, CSS, and JavaScript to build dynamic, interactive web applications.
 
-## Task Overview:
+## Task  1 Overview:
 As part of my internship, I was assigned to **create a To-Do list** using **HTML**, **CSS**, and **JavaScript**. The key features of this application include:
 - Add, edit, and remove tasks.
 - Mark tasks as completed or pending.
@@ -50,11 +50,11 @@ The first task in this internship project was to create a simple To-Do list usin
 This project demonstrates my ability to build and style interactive, user-friendly web applications. It showcases my understanding of frontend technologies and commitment to providing engaging, functional solutions during my internship.
 
 
-# Sports E-commerce - Frontend Internship Project
+# task-2  Sports E-commerce - Frontend Internship Project
 
 This project is a fully functional **Sports E-commerce website** developed as part of my Web Development Internship at **Brainwave Matrix Solutions**. It demonstrates my proficiency in utilizing **HTML**, **CSS**, and **JavaScript** to build dynamic, interactive web applications.
 
-## Task Overview:
+## Task  2 Overview:
 As part of my internship, I was assigned to create a **Sports E-commerce website** using **HTML**, **CSS**, and **JavaScript**. The key features of this application include:
 - **Product Display**: A dynamic grid of sports products like Soccer Balls, Tennis Rackets, etc.
 - **Add to Cart**: Users can add products to their cart and view the total price.
